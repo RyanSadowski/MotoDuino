@@ -1,5 +1,6 @@
 # MotoDuino
 
+![GIF HERE](https://github.com/RyanSadowski/MotoDuino/blob/master/testv1.gif)
 ## Setup
 
 - Arduino Uno or something comprable
