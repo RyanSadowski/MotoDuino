@@ -17,7 +17,6 @@ void setup() {
 }
 
 void loop() {
-  clear();
   sensorValue = analogRead(sensorPin);
   werkit(sensorValue);
 }
@@ -57,8 +56,12 @@ void werkit(int i) {
   checkColor(level);
   for ( int i = 0; i < level; i++) {
     strip.setPixelColor(i, color);
-    strip.show();
   }
+  for ( int i = 25; i > level; i--){
+    strip.setPixelColor(i, 0, 0, 0);
+  }
+  strip.show();
+  delay(5);
 }
 void clear() {
   for (int i = 0; i < pixels; i++) {
